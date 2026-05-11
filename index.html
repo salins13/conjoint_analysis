@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Product Preference Survey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero__eyebrow">Preliminary Market Survey</div>
+        <h1>AI-Based Product Preference Survey</h1>
+        <p class="hero__lead">
+          This survey collects preference data from medical and rehabilitation
+          professionals. Please review each choice set and select the product
+          option you would be most likely to recommend or adopt in your setting.
+        </p>
+        <div class="hero__meta">
+          <span>Estimated time: 10-15 minutes</span>
+          <span>Format: Choice-based conjoint</span>
+          <span>Responses saved to Google Sheets</span>
+        </div>
+      </header>
+
+      <main>
+        <form id="survey-form" class="survey-form">
+          <section class="panel panel--intro">
+            <div class="panel__header">
+              <h2>Before You Start</h2>
+            </div>
+            <div class="panel__body prose">
+              <p>
+                There are no right or wrong answers. In each task, choose the
+                single option that best matches what you would support in your
+                professional environment.
+              </p>
+              <p>
+                Your submission will include your profile responses, your choice
+                in each task, and a timestamp for data analysis.
+              </p>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel__header">
+              <h2>Respondent Profile</h2>
+            </div>
+            <div class="panel__body grid grid--two">
+              <label class="field">
+                <span>Participant ID</span>
+                <input type="text" name="participantId" placeholder="Optional code" />
+              </label>
+
+              <label class="field">
+                <span>Date</span>
+                <input type="date" name="surveyDate" />
+              </label>
+
+              <label class="field">
+                <span>Profession / designation</span>
+                <input type="text" name="profession" required />
+              </label>
+
+              <label class="field">
+                <span>Primary specialty or service area</span>
+                <input type="text" name="specialty" required />
+              </label>
+
+              <label class="field">
+                <span>Years of professional experience</span>
+                <input type="text" name="experienceYears" required />
+              </label>
+
+              <label class="field">
+                <span>Primary work setting</span>
+                <input type="text" name="workSetting" required />
+              </label>
+
+              <label class="field">
+                <span>Do you currently use AI-enabled or digital support tools?</span>
+                <select name="usesAiTools" required>
+                  <option value="">Select</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                  <option>Sometimes</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Are you involved in recommending or purchasing such tools?</span>
+                <select name="involvedInSelection" required>
+                  <option value="">Select</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                  <option>Partly</option>
+                </select>
+              </label>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel__header">
+              <h2>Choice Tasks</h2>
+              <p>Choose one option in every task.</p>
+            </div>
+            <div id="tasks-container" class="tasks-stack"></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel__header">
+              <h2>Overall Feedback</h2>
+            </div>
+            <div class="panel__body grid">
+              <label class="field">
+                <span>Which 3 features matter most when evaluating an AI-based product for your setting?</span>
+                <textarea name="topFeatures" rows="4" required></textarea>
+              </label>
+
+              <label class="field">
+                <span>What is an acceptable price range for this kind of product in your setting?</span>
+                <textarea name="acceptablePriceRange" rows="3" required></textarea>
+              </label>
+
+              <label class="field">
+                <span>What concerns would most limit adoption?</span>
+                <textarea name="adoptionConcerns" rows="4" required></textarea>
+              </label>
+
+              <label class="field">
+                <span>Would you consider recommending or adopting a product like this if it performed well? Why or why not?</span>
+                <textarea name="adoptionLikelihood" rows="4" required></textarea>
+              </label>
+            </div>
+          </section>
+
+          <section class="panel panel--submit">
+            <div class="panel__body submit-row">
+              <div>
+                <h2>Submit Survey</h2>
+                <p id="form-status" class="form-status">
+                  Ready to submit once all tasks are completed.
+                </p>
+              </div>
+              <button type="submit" class="submit-button">Submit Response</button>
+            </div>
+          </section>
+        </form>
+      </main>
+    </div>
+
+    <script src="./survey-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
