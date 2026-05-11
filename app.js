@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxeluHO4HzvJm0XUfl4IoF9NbYVEU9G-fJFDV5lJmMZ66tsC57dJ7xHNRt0f2HQHoWD/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxJw2eK05zWIdtc5qymbgdKr9uhcRVkw27I2yIzULjKDzth5gjxB0a_PF_ynLkFSWMX/exec";
 
 const TASK_NOTE =
   "Select the one option you would most likely support in your professional setting.";
