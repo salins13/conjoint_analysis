@@ -162,9 +162,13 @@ body {
 .field {
   display: grid;
   gap: 9px;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-.field span {
+.field span,
+.feature-group legend {
   font-weight: 700;
   font-size: 0.95rem;
 }
@@ -189,6 +193,30 @@ body {
   border-color: rgba(14, 107, 91, 0.5);
   box-shadow: 0 0 0 4px rgba(14, 107, 91, 0.14);
   transform: translateY(-1px);
+}
+
+.feature-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.feature-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper-strong);
+  font-weight: 600;
+}
+
+.feature-option input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
 }
 
 .tasks-stack {
@@ -372,7 +400,8 @@ body {
 
 @media (max-width: 980px) {
   .grid--two,
-  .options-grid {
+  .options-grid,
+  .feature-checkboxes {
     grid-template-columns: 1fr;
   }
 

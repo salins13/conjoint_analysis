@@ -1,12 +1,34 @@
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxJw2eK05zWIdtc5qymbgdKr9uhcRVkw27I2yIzULjKDzth5gjxB0a_PF_ynLkFSWMX/exec";
 
 const TASK_NOTE =
-  "Select the one option you would most likely support in your professional setting.";
+  "Please review the three textbook options and choose the one you prefer.";
 
 const form = document.querySelector("#survey-form");
 const tasksContainer = document.querySelector("#tasks-container");
+const featureCheckboxes = document.querySelector("#feature-checkboxes");
 const statusNode = document.querySelector("#form-status");
 const submitButton = document.querySelector(".submit-button");
+
+function getFeatureHeadings() {
+  const firstTask = window.SURVEY_TASKS[0];
+  if (!firstTask || !firstTask.alternatives[0]) {
+    return [];
+  }
+
+  return Object.keys(firstTask.alternatives[0]).filter((key) => key !== "alternative");
+}
+
+function renderFeatureCheckboxes() {
+  getFeatureHeadings().forEach((feature) => {
+    const label = document.createElement("label");
+    label.className = "feature-option";
+    label.innerHTML = `
+      <input type="checkbox" name="topFeatures" value="${feature}" />
+      <span>${feature}</span>
+    `;
+    featureCheckboxes.appendChild(label);
+  });
+}
 
 function renderTasks() {
   window.SURVEY_TASKS.forEach((task) => {
@@ -63,15 +85,13 @@ function renderTasks() {
 }
 
 function setTodayDefault() {
-  const dateField = form.elements.namedItem("surveyDate");
-  if (dateField && !dateField.value) {
-    const today = new Date();
-    const offset = today.getTimezoneOffset();
-    const localDate = new Date(today.getTime() - offset * 60000)
-      .toISOString()
-      .split("T")[0];
-    dateField.value = localDate;
-  }
+  return new Date().toISOString().split("T")[0];
+}
+
+function generateParticipantId() {
+  const stamp = Date.now().toString(36).toUpperCase();
+  const random = Math.random().toString(36).slice(2, 7).toUpperCase();
+  return `P-${stamp}-${random}`;
 }
 
 function getTaskChoices() {
@@ -90,19 +110,38 @@ function validateTaskCompletion() {
     const firstMissing = incomplete[0].task;
     throw new Error(`Please complete Task ${firstMissing} before submitting.`);
   }
+
+  if (!form.querySelector('input[name="topFeatures"]:checked')) {
+    throw new Error("Please select at least one feature in Overall Feedback.");
+  }
 }
 
 function serializeForm() {
   const formData = new FormData(form);
   const profile = Object.fromEntries(formData.entries());
   const choices = getTaskChoices();
+  const topFeatures = Array.from(
+    form.querySelectorAll('input[name="topFeatures"]:checked')
+  ).map((node) => node.value);
+  const submittedAt = new Date().toISOString();
 
   return {
-    submittedAt: new Date().toISOString(),
-    profile,
+    submittedAt,
+    profile: {
+      participantId: generateParticipantId(),
+      surveyDate: setTodayDefault(),
+      name: profile.name || "",
+      email: profile.email || "",
+      profession: profile.profession || "",
+      experienceYears: profile.experienceYears || "",
+      workSetting: profile.workSetting || "",
+      usesAiTools: profile.usesAiTools || "",
+      involvedInSelection: profile.involvedInSelection || "",
+      topFeatures,
+    },
     choices,
     metadata: {
-      surveyVersion: "github-pages-static-v1",
+      surveyVersion: "github-pages-static-v2",
       totalTasks: window.SURVEY_TASKS.length,
       userAgent: navigator.userAgent,
     },
@@ -153,7 +192,6 @@ form.addEventListener("submit", async (event) => {
     await submitToAppsScript(payload);
 
     form.reset();
-    setTodayDefault();
     setStatus("Response submitted. Thank you for completing the survey.", "is-success");
     window.scrollTo({ top: 0, behavior: "smooth" });
   } catch (error) {
@@ -163,6 +201,6 @@ form.addEventListener("submit", async (event) => {
   }
 });
 
+renderFeatureCheckboxes();
 renderTasks();
-setTodayDefault();
 setStatus(`${window.SURVEY_TASKS.length} tasks are loaded. Please complete every choice set.`);
