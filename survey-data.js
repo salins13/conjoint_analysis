@@ -4,33 +4,33 @@ window.SURVEY_TASKS = [
     "alternatives": [
       {
         "alternative": 1,
-        "Lesson presentation": "Text only",
-        "Vocabulary support": "No support",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Quiz only",
-        "Sign language support": "Full lesson",
-        "Navigation and progress": "Basic",
-        "Additional cost": "High"
+        "Lesson format": "Text lessons",
+        "Vocabulary help": "No vocabulary help",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "Quiz only",
+        "Sign language support": "Full lesson signing",
+        "Navigation tools": "Basic navigation",
+        "Cost": "High cost"
       },
       {
         "alternative": 2,
-        "Lesson presentation": "Text only",
-        "Vocabulary support": "Picture + sign + explanation",
-        "Reading text support": "Segmented text",
-        "Feedback and tutoring": "Immediate feedback",
-        "Sign language support": "None",
-        "Navigation and progress": "Basic",
-        "Additional cost": "No cost"
+        "Lesson format": "Text lessons",
+        "Vocabulary help": "Pictures + sign + explanation",
+        "Reading support": "Short sections",
+        "Learning feedback": "Instant feedback",
+        "Sign language support": "No sign support",
+        "Navigation tools": "Basic navigation",
+        "Cost": "Free"
       },
       {
         "alternative": 3,
-        "Lesson presentation": "Text with captioned video",
-        "Vocabulary support": "No support",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Quiz only",
-        "Sign language support": "Full lesson",
-        "Navigation and progress": "Icons",
-        "Additional cost": "No cost"
+        "Lesson format": "Captioned videos",
+        "Vocabulary help": "No vocabulary help",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "Quiz only",
+        "Sign language support": "Full lesson signing",
+        "Navigation tools": "Icon-based navigation",
+        "Cost": "Free"
       }
     ]
   },
@@ -39,33 +39,33 @@ window.SURVEY_TASKS = [
     "alternatives": [
       {
         "alternative": 1,
-        "Lesson presentation": "Text with pictures",
-        "Vocabulary support": "No support",
-        "Reading text support": "Simplified text",
-        "Feedback and tutoring": "Personalized tutor",
-        "Sign language support": "Keywords",
-        "Navigation and progress": "Progress + review",
-        "Additional cost": "No cost"
+        "Lesson format": "Text + pictures",
+        "Vocabulary help": "No vocabulary help",
+        "Reading support": "Simplified text",
+        "Learning feedback": "AI tutor",
+        "Sign language support": "Sign for keywords",
+        "Navigation tools": "Progress + review",
+        "Cost": "Free"
       },
       {
         "alternative": 2,
-        "Lesson presentation": "Text with pictures",
-        "Vocabulary support": "Picture + sign + explanation",
-        "Reading text support": "Original text",
-        "Feedback and tutoring": "Hints",
-        "Sign language support": "Keywords",
-        "Navigation and progress": "Basic",
-        "Additional cost": "Moderate"
+        "Lesson format": "Text + pictures",
+        "Vocabulary help": "Pictures + sign + explanation",
+        "Reading support": "Standard text",
+        "Learning feedback": "Learning hints",
+        "Sign language support": "Sign for keywords",
+        "Navigation tools": "Basic navigation",
+        "Cost": "Moderate cost"
       },
       {
         "alternative": 3,
-        "Lesson presentation": "Text with pictures",
-        "Vocabulary support": "Picture + sign + explanation",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Immediate feedback",
-        "Sign language support": "Keywords",
-        "Navigation and progress": "Progress tracking",
-        "Additional cost": "No cost"
+        "Lesson format": "Text + pictures",
+        "Vocabulary help": "Pictures + sign + explanation",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "Instant feedback",
+        "Sign language support": "Sign for keywords",
+        "Navigation tools": "Progress tracking",
+        "Cost": "Free"
       }
     ]
   },
@@ -74,33 +74,33 @@ window.SURVEY_TASKS = [
     "alternatives": [
       {
         "alternative": 1,
-        "Lesson presentation": "Text only",
-        "Vocabulary support": "Picture + sign + explanation",
-        "Reading text support": "Simplified text",
-        "Feedback and tutoring": "Quiz only",
-        "Sign language support": "Keywords",
-        "Navigation and progress": "Progress + review",
-        "Additional cost": "Moderate"
+        "Lesson format": "Text lessons",
+        "Vocabulary help": "Pictures + sign + explanation",
+        "Reading support": "Simplified text",
+        "Learning feedback": "Quiz only",
+        "Sign language support": "Sign for keywords",
+        "Navigation tools": "Progress + review",
+        "Cost": "Moderate cost"
       },
       {
         "alternative": 2,
-        "Lesson presentation": "Text only",
-        "Vocabulary support": "Picture + sign",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Quiz only",
-        "Sign language support": "Words + sentences",
-        "Navigation and progress": "Basic",
-        "Additional cost": "No cost"
+        "Lesson format": "Text lessons",
+        "Vocabulary help": "Pictures + sign support",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "Quiz only",
+        "Sign language support": "Sign for words & sentences",
+        "Navigation tools": "Basic navigation",
+        "Cost": "Free"
       },
       {
         "alternative": 3,
-        "Lesson presentation": "Text with interactive visual explanation",
-        "Vocabulary support": "Picture",
-        "Reading text support": "Segmented text",
-        "Feedback and tutoring": "Quiz only",
-        "Sign language support": "None",
-        "Navigation and progress": "Basic",
-        "Additional cost": "Low"
+        "Lesson format": "Interactive visuals",
+        "Vocabulary help": "Picture support",
+        "Reading support": "Short sections",
+        "Learning feedback": "Quiz only",
+        "Sign language support": "No sign support",
+        "Navigation tools": "Basic navigation",
+        "Cost": "Low cost"
       }
     ]
   },
@@ -109,33 +109,33 @@ window.SURVEY_TASKS = [
     "alternatives": [
       {
         "alternative": 1,
-        "Lesson presentation": "Text only",
-        "Vocabulary support": "No support",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Personalized tutor",
-        "Sign language support": "Keywords",
-        "Navigation and progress": "Basic",
-        "Additional cost": "No cost"
+        "Lesson format": "Text lessons",
+        "Vocabulary help": "No vocabulary help",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "AI tutor",
+        "Sign language support": "Sign for keywords",
+        "Navigation tools": "Basic navigation",
+        "Cost": "Free"
       },
       {
         "alternative": 2,
-        "Lesson presentation": "Text only",
-        "Vocabulary support": "Picture + sign",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Personalized tutor",
-        "Sign language support": "Full lesson",
-        "Navigation and progress": "Progress + review",
-        "Additional cost": "Moderate"
+        "Lesson format": "Text lessons",
+        "Vocabulary help": "Pictures + sign support",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "AI tutor",
+        "Sign language support": "Full lesson signing",
+        "Navigation tools": "Progress + review",
+        "Cost": "Moderate cost"
       },
       {
         "alternative": 3,
-        "Lesson presentation": "Text only",
-        "Vocabulary support": "Picture",
-        "Reading text support": "Original text",
-        "Feedback and tutoring": "Quiz only",
-        "Sign language support": "Keywords",
-        "Navigation and progress": "Basic",
-        "Additional cost": "Low"
+        "Lesson format": "Text lessons",
+        "Vocabulary help": "Picture support",
+        "Reading support": "Standard text",
+        "Learning feedback": "Quiz only",
+        "Sign language support": "Sign for keywords",
+        "Navigation tools": "Basic navigation",
+        "Cost": "Low cost"
       }
     ]
   },
@@ -144,33 +144,33 @@ window.SURVEY_TASKS = [
     "alternatives": [
       {
         "alternative": 1,
-        "Lesson presentation": "Text with pictures",
-        "Vocabulary support": "Picture + sign",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Personalized tutor",
-        "Sign language support": "Full lesson",
-        "Navigation and progress": "Progress + review",
-        "Additional cost": "No cost"
+        "Lesson format": "Text + pictures",
+        "Vocabulary help": "Pictures + sign support",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "AI tutor",
+        "Sign language support": "Full lesson signing",
+        "Navigation tools": "Progress + review",
+        "Cost": "Free"
       },
       {
         "alternative": 2,
-        "Lesson presentation": "Text with pictures",
-        "Vocabulary support": "Picture + sign + explanation",
-        "Reading text support": "Simplified text",
-        "Feedback and tutoring": "Personalized tutor",
-        "Sign language support": "None",
-        "Navigation and progress": "Icons",
-        "Additional cost": "High"
+        "Lesson format": "Text + pictures",
+        "Vocabulary help": "Pictures + sign + explanation",
+        "Reading support": "Simplified text",
+        "Learning feedback": "AI tutor",
+        "Sign language support": "No sign support",
+        "Navigation tools": "Icon-based navigation",
+        "Cost": "High cost"
       },
       {
         "alternative": 3,
-        "Lesson presentation": "Text only",
-        "Vocabulary support": "No support",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Immediate feedback",
-        "Sign language support": "Words + sentences",
-        "Navigation and progress": "Icons",
-        "Additional cost": "Low"
+        "Lesson format": "Text lessons",
+        "Vocabulary help": "No vocabulary help",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "Instant feedback",
+        "Sign language support": "Sign for words & sentences",
+        "Navigation tools": "Icon-based navigation",
+        "Cost": "Low cost"
       }
     ]
   },
@@ -179,33 +179,33 @@ window.SURVEY_TASKS = [
     "alternatives": [
       {
         "alternative": 1,
-        "Lesson presentation": "Text with pictures",
-        "Vocabulary support": "Picture + sign + explanation",
-        "Reading text support": "Original text",
-        "Feedback and tutoring": "Quiz only",
-        "Sign language support": "Full lesson",
-        "Navigation and progress": "Icons",
-        "Additional cost": "High"
+        "Lesson format": "Text + pictures",
+        "Vocabulary help": "Pictures + sign + explanation",
+        "Reading support": "Standard text",
+        "Learning feedback": "Quiz only",
+        "Sign language support": "Full lesson signing",
+        "Navigation tools": "Icon-based navigation",
+        "Cost": "High cost"
       },
       {
         "alternative": 2,
-        "Lesson presentation": "Text with interactive visual explanation",
-        "Vocabulary support": "Picture",
-        "Reading text support": "Simplified text",
-        "Feedback and tutoring": "Hints",
-        "Sign language support": "Full lesson",
-        "Navigation and progress": "Basic",
-        "Additional cost": "Moderate"
+        "Lesson format": "Interactive visuals",
+        "Vocabulary help": "Picture support",
+        "Reading support": "Simplified text",
+        "Learning feedback": "Learning hints",
+        "Sign language support": "Full lesson signing",
+        "Navigation tools": "Basic navigation",
+        "Cost": "Moderate cost"
       },
       {
         "alternative": 3,
-        "Lesson presentation": "Text with pictures",
-        "Vocabulary support": "Picture + sign",
-        "Reading text support": "Simplified text",
-        "Feedback and tutoring": "Immediate feedback",
-        "Sign language support": "Full lesson",
-        "Navigation and progress": "Basic",
-        "Additional cost": "High"
+        "Lesson format": "Text + pictures",
+        "Vocabulary help": "Pictures + sign support",
+        "Reading support": "Simplified text",
+        "Learning feedback": "Instant feedback",
+        "Sign language support": "Full lesson signing",
+        "Navigation tools": "Basic navigation",
+        "Cost": "High cost"
       }
     ]
   },
@@ -214,33 +214,33 @@ window.SURVEY_TASKS = [
     "alternatives": [
       {
         "alternative": 1,
-        "Lesson presentation": "Text with captioned video",
-        "Vocabulary support": "No support",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Hints",
-        "Sign language support": "Keywords",
-        "Navigation and progress": "Progress tracking",
-        "Additional cost": "High"
+        "Lesson format": "Captioned videos",
+        "Vocabulary help": "No vocabulary help",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "Learning hints",
+        "Sign language support": "Sign for keywords",
+        "Navigation tools": "Progress tracking",
+        "Cost": "High cost"
       },
       {
         "alternative": 2,
-        "Lesson presentation": "Text only",
-        "Vocabulary support": "No support",
-        "Reading text support": "Original text",
-        "Feedback and tutoring": "Personalized tutor",
-        "Sign language support": "Keywords",
-        "Navigation and progress": "Icons",
-        "Additional cost": "No cost"
+        "Lesson format": "Text lessons",
+        "Vocabulary help": "No vocabulary help",
+        "Reading support": "Standard text",
+        "Learning feedback": "AI tutor",
+        "Sign language support": "Sign for keywords",
+        "Navigation tools": "Icon-based navigation",
+        "Cost": "Free"
       },
       {
         "alternative": 3,
-        "Lesson presentation": "Text with interactive visual explanation",
-        "Vocabulary support": "Picture + sign",
-        "Reading text support": "Simplified text",
-        "Feedback and tutoring": "Immediate feedback",
-        "Sign language support": "Full lesson",
-        "Navigation and progress": "Progress + review",
-        "Additional cost": "High"
+        "Lesson format": "Interactive visuals",
+        "Vocabulary help": "Pictures + sign support",
+        "Reading support": "Simplified text",
+        "Learning feedback": "Instant feedback",
+        "Sign language support": "Full lesson signing",
+        "Navigation tools": "Progress + review",
+        "Cost": "High cost"
       }
     ]
   },
@@ -249,33 +249,33 @@ window.SURVEY_TASKS = [
     "alternatives": [
       {
         "alternative": 1,
-        "Lesson presentation": "Text with captioned video",
-        "Vocabulary support": "Picture + sign",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Hints",
-        "Sign language support": "None",
-        "Navigation and progress": "Progress + review",
-        "Additional cost": "Low"
+        "Lesson format": "Captioned videos",
+        "Vocabulary help": "Pictures + sign support",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "Learning hints",
+        "Sign language support": "No sign support",
+        "Navigation tools": "Progress + review",
+        "Cost": "Low cost"
       },
       {
         "alternative": 2,
-        "Lesson presentation": "Text with interactive visual explanation",
-        "Vocabulary support": "Picture",
-        "Reading text support": "Segmented text",
-        "Feedback and tutoring": "Quiz only",
-        "Sign language support": "Keywords",
-        "Navigation and progress": "Progress tracking",
-        "Additional cost": "No cost"
+        "Lesson format": "Interactive visuals",
+        "Vocabulary help": "Picture support",
+        "Reading support": "Short sections",
+        "Learning feedback": "Quiz only",
+        "Sign language support": "Sign for keywords",
+        "Navigation tools": "Progress tracking",
+        "Cost": "Free"
       },
       {
         "alternative": 3,
-        "Lesson presentation": "Text with pictures",
-        "Vocabulary support": "Picture",
-        "Reading text support": "Original text",
-        "Feedback and tutoring": "Immediate feedback",
-        "Sign language support": "Words + sentences",
-        "Navigation and progress": "Progress + review",
-        "Additional cost": "High"
+        "Lesson format": "Text + pictures",
+        "Vocabulary help": "Picture support",
+        "Reading support": "Standard text",
+        "Learning feedback": "Instant feedback",
+        "Sign language support": "Sign for words & sentences",
+        "Navigation tools": "Progress + review",
+        "Cost": "High cost"
       }
     ]
   },
@@ -284,33 +284,33 @@ window.SURVEY_TASKS = [
     "alternatives": [
       {
         "alternative": 1,
-        "Lesson presentation": "Text with pictures",
-        "Vocabulary support": "No support",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Personalized tutor",
-        "Sign language support": "Words + sentences",
-        "Navigation and progress": "Icons",
-        "Additional cost": "Moderate"
+        "Lesson format": "Text + pictures",
+        "Vocabulary help": "No vocabulary help",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "AI tutor",
+        "Sign language support": "Sign for words & sentences",
+        "Navigation tools": "Icon-based navigation",
+        "Cost": "Moderate cost"
       },
       {
         "alternative": 2,
-        "Lesson presentation": "Text with pictures",
-        "Vocabulary support": "Picture + sign",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Hints",
-        "Sign language support": "None",
-        "Navigation and progress": "Progress + review",
-        "Additional cost": "High"
+        "Lesson format": "Text + pictures",
+        "Vocabulary help": "Pictures + sign support",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "Learning hints",
+        "Sign language support": "No sign support",
+        "Navigation tools": "Progress + review",
+        "Cost": "High cost"
       },
       {
         "alternative": 3,
-        "Lesson presentation": "Text with captioned video",
-        "Vocabulary support": "No support",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Hints",
-        "Sign language support": "Keywords",
-        "Navigation and progress": "Basic",
-        "Additional cost": "Low"
+        "Lesson format": "Captioned videos",
+        "Vocabulary help": "No vocabulary help",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "Learning hints",
+        "Sign language support": "Sign for keywords",
+        "Navigation tools": "Basic navigation",
+        "Cost": "Low cost"
       }
     ]
   },
@@ -319,33 +319,33 @@ window.SURVEY_TASKS = [
     "alternatives": [
       {
         "alternative": 1,
-        "Lesson presentation": "Text with captioned video",
-        "Vocabulary support": "Picture + sign",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Quiz only",
-        "Sign language support": "Keywords",
-        "Navigation and progress": "Icons",
-        "Additional cost": "Low"
+        "Lesson format": "Captioned videos",
+        "Vocabulary help": "Pictures + sign support",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "Quiz only",
+        "Sign language support": "Sign for keywords",
+        "Navigation tools": "Icon-based navigation",
+        "Cost": "Low cost"
       },
       {
         "alternative": 2,
-        "Lesson presentation": "Text only",
-        "Vocabulary support": "Picture + sign",
-        "Reading text support": "Adaptive text",
-        "Feedback and tutoring": "Personalized tutor",
-        "Sign language support": "Keywords",
-        "Navigation and progress": "Progress + review",
-        "Additional cost": "High"
+        "Lesson format": "Text lessons",
+        "Vocabulary help": "Pictures + sign support",
+        "Reading support": "Personalized reading",
+        "Learning feedback": "AI tutor",
+        "Sign language support": "Sign for keywords",
+        "Navigation tools": "Progress + review",
+        "Cost": "High cost"
       },
       {
         "alternative": 3,
-        "Lesson presentation": "Text only",
-        "Vocabulary support": "Picture + sign + explanation",
-        "Reading text support": "Simplified text",
-        "Feedback and tutoring": "Quiz only",
-        "Sign language support": "Keywords",
-        "Navigation and progress": "Icons",
-        "Additional cost": "Low"
+        "Lesson format": "Text lessons",
+        "Vocabulary help": "Pictures + sign + explanation",
+        "Reading support": "Simplified text",
+        "Learning feedback": "Quiz only",
+        "Sign language support": "Sign for keywords",
+        "Navigation tools": "Icon-based navigation",
+        "Cost": "Low cost"
       }
     ]
   },
@@ -354,33 +354,33 @@ window.SURVEY_TASKS = [
     "alternatives": [
       {
         "alternative": 1,
-        "Lesson presentation": "Text with captioned video",
-        "Vocabulary support": "Picture + sign + explanation",
-        "Reading text support": "Simplified text",
-        "Feedback and tutoring": "Personalized tutor",
-        "Sign language support": "Full lesson",
-        "Navigation and progress": "Basic",
-        "Additional cost": "High"
+        "Lesson format": "Captioned videos",
+        "Vocabulary help": "Pictures + sign + explanation",
+        "Reading support": "Simplified text",
+        "Learning feedback": "AI tutor",
+        "Sign language support": "Full lesson signing",
+        "Navigation tools": "Basic navigation",
+        "Cost": "High cost"
       },
       {
         "alternative": 2,
-        "Lesson presentation": "Text with interactive visual explanation",
-        "Vocabulary support": "No support",
-        "Reading text support": "Original text",
-        "Feedback and tutoring": "Hints",
-        "Sign language support": "Words + sentences",
-        "Navigation and progress": "Basic",
-        "Additional cost": "Low"
+        "Lesson format": "Interactive visuals",
+        "Vocabulary help": "No vocabulary help",
+        "Reading support": "Standard text",
+        "Learning feedback": "Learning hints",
+        "Sign language support": "Sign for words & sentences",
+        "Navigation tools": "Basic navigation",
+        "Cost": "Low cost"
       },
       {
         "alternative": 3,
-        "Lesson presentation": "Text only",
-        "Vocabulary support": "Picture + sign + explanation",
-        "Reading text support": "Original text",
-        "Feedback and tutoring": "Immediate feedback",
-        "Sign language support": "Words + sentences",
-        "Navigation and progress": "Basic",
-        "Additional cost": "Low"
+        "Lesson format": "Text lessons",
+        "Vocabulary help": "Pictures + sign + explanation",
+        "Reading support": "Standard text",
+        "Learning feedback": "Instant feedback",
+        "Sign language support": "Sign for words & sentences",
+        "Navigation tools": "Basic navigation",
+        "Cost": "Low cost"
       }
     ]
   },
@@ -389,33 +389,33 @@ window.SURVEY_TASKS = [
     "alternatives": [
       {
         "alternative": 1,
-        "Lesson presentation": "Text only",
-        "Vocabulary support": "Picture",
-        "Reading text support": "Simplified text",
-        "Feedback and tutoring": "Hints",
-        "Sign language support": "None",
-        "Navigation and progress": "Progress + review",
-        "Additional cost": "High"
+        "Lesson format": "Text lessons",
+        "Vocabulary help": "Picture support",
+        "Reading support": "Simplified text",
+        "Learning feedback": "Learning hints",
+        "Sign language support": "No sign support",
+        "Navigation tools": "Progress + review",
+        "Cost": "High cost"
       },
       {
         "alternative": 2,
-        "Lesson presentation": "Text with captioned video",
-        "Vocabulary support": "No support",
-        "Reading text support": "Simplified text",
-        "Feedback and tutoring": "Personalized tutor",
-        "Sign language support": "Keywords",
-        "Navigation and progress": "Progress tracking",
-        "Additional cost": "High"
+        "Lesson format": "Captioned videos",
+        "Vocabulary help": "No vocabulary help",
+        "Reading support": "Simplified text",
+        "Learning feedback": "AI tutor",
+        "Sign language support": "Sign for keywords",
+        "Navigation tools": "Progress tracking",
+        "Cost": "High cost"
       },
       {
         "alternative": 3,
-        "Lesson presentation": "Text with captioned video",
-        "Vocabulary support": "Picture + sign + explanation",
-        "Reading text support": "Original text",
-        "Feedback and tutoring": "Quiz only",
-        "Sign language support": "None",
-        "Navigation and progress": "Icons",
-        "Additional cost": "Moderate"
+        "Lesson format": "Captioned videos",
+        "Vocabulary help": "Pictures + sign + explanation",
+        "Reading support": "Standard text",
+        "Learning feedback": "Quiz only",
+        "Sign language support": "No sign support",
+        "Navigation tools": "Icon-based navigation",
+        "Cost": "Moderate cost"
       }
     ]
   }

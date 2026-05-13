@@ -1,4 +1,33 @@
 const SHEET_NAME = "Responses";
+const HEADERS = [
+  "submittedAt",
+  "participantId",
+  "surveyDate",
+  "name",
+  "email",
+  "profession",
+  "experienceYears",
+  "workSetting",
+  "usesAiTools",
+  "involvedInSelection",
+  "topFeatures",
+  "task1Choice",
+  "task2Choice",
+  "task3Choice",
+  "task4Choice",
+  "task5Choice",
+  "task6Choice",
+  "task7Choice",
+  "task8Choice",
+  "task9Choice",
+  "task10Choice",
+  "task11Choice",
+  "task12Choice",
+  "surveyVersion",
+  "totalTasks",
+  "userAgent",
+  "rawJson",
+];
 
 function doPost(e) {
   try {
@@ -29,40 +58,11 @@ function getOrCreateSheet_() {
 
 function ensureHeader_(sheet) {
   if (sheet.getLastRow() > 0) {
+    sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]);
     return;
   }
 
-  const headers = [
-    "submittedAt",
-    "participantId",
-    "surveyDate",
-    "name",
-    "email",
-    "profession",
-    "experienceYears",
-    "workSetting",
-    "usesAiTools",
-    "involvedInSelection",
-    "topFeatures",
-    "task1Choice",
-    "task2Choice",
-    "task3Choice",
-    "task4Choice",
-    "task5Choice",
-    "task6Choice",
-    "task7Choice",
-    "task8Choice",
-    "task9Choice",
-    "task10Choice",
-    "task11Choice",
-    "task12Choice",
-    "surveyVersion",
-    "totalTasks",
-    "userAgent",
-    "rawJson",
-  ];
-
-  sheet.appendRow(headers);
+  sheet.appendRow(HEADERS);
   sheet.setFrozenRows(1);
 }
 

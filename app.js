@@ -42,7 +42,7 @@ function renderTasks() {
         <div class="task-card__badge">Task ${task.task}</div>
         <p class="task-card__note">${TASK_NOTE}</p>
       </div>
-      <h3 class="task-card__title">Choose one concept</h3>
+      <h3 class="task-card__title">Which textbook option do you prefer?</h3>
     `;
 
     const optionsGrid = document.createElement("div");
@@ -80,6 +80,7 @@ function renderTasks() {
 
     article.appendChild(header);
     article.appendChild(optionsGrid);
+
     tasksContainer.appendChild(article);
   });
 }
