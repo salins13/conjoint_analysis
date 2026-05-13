@@ -9,18 +9,39 @@ const featureCheckboxes = document.querySelector("#feature-checkboxes");
 const statusNode = document.querySelector("#form-status");
 const submitButton = document.querySelector(".submit-button");
 
-const ATTRIBUTE_SYMBOLS = {
-  "Lesson format": "📘",
-  "Vocabulary help": "🖼️",
-  "Reading support": "📖",
-  "Learning feedback": "🤖",
-  "Sign language support": "🤟",
-  "Navigation tools": "🧭",
-  Cost: "💰",
+const LEVEL_SYMBOLS = {
+  "Text lessons": "T",
+  "Text + pictures": "🖼️",
+  "Captioned videos": "🎬",
+  "Interactive visuals": "✨",
+  "No vocabulary help": "–",
+  "Picture support": "🖼️",
+  "Pictures + sign support": "🤟",
+  "Pictures + sign + explanation": "💬",
+  "Standard text": "A",
+  "Simplified text": "S",
+  "Short sections": "§",
+  "Personalized reading": "↔",
+  "Quiz only": "?",
+  "Instant feedback": "✓",
+  "Learning hints": "💡",
+  "AI tutor": "AI",
+  "No sign support": "–",
+  "Sign for keywords": "KW",
+  "Sign for words & sentences": "W+S",
+  "Full lesson signing": "FULL",
+  "Basic navigation": "→",
+  "Icon-based navigation": "◈",
+  "Progress tracking": "%",
+  "Progress + review": "↺",
+  Free: "0",
+  "Low cost": "$",
+  "Moderate cost": "$$",
+  "High cost": "$$$",
 };
 
-function getAttributeSymbol(feature) {
-  return ATTRIBUTE_SYMBOLS[feature] || "•";
+function getLevelSymbol(level) {
+  return LEVEL_SYMBOLS[level] || "•";
 }
 
 function getFeatureHeadings() {
@@ -38,7 +59,6 @@ function renderFeatureCheckboxes() {
     label.className = "feature-option";
     label.innerHTML = `
       <input type="checkbox" name="topFeatures" value="${feature}" />
-      <span class="feature-option__symbol" aria-hidden="true">${getAttributeSymbol(feature)}</span>
       <span>${feature}</span>
     `;
     featureCheckboxes.appendChild(label);
@@ -72,11 +92,11 @@ function renderTasks() {
         .map(
           ([key, value]) => `
             <div class="option-card__row">
-              <span class="option-card__attr">
-                <span class="option-card__symbol" aria-hidden="true">${getAttributeSymbol(key)}</span>
-                <span>${key}</span>
+              <span class="option-card__attr">${key}</span>
+              <span class="option-card__value">
+                <span class="option-card__level-symbol" aria-hidden="true">${getLevelSymbol(value)}</span>
+                <span>${value}</span>
               </span>
-              <span class="option-card__value">${value}</span>
             </div>
           `
         )
