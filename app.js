@@ -44,6 +44,10 @@ function getLevelSymbol(level) {
   return LEVEL_SYMBOLS[level] || "•";
 }
 
+function getAttributeTheme(feature) {
+  return `attribute-${feature.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+}
+
 function getFeatureHeadings() {
   const firstTask = window.SURVEY_TASKS[0];
   if (!firstTask || !firstTask.alternatives[0]) {
@@ -91,7 +95,7 @@ function renderTasks() {
         .filter(([key]) => key !== "alternative")
         .map(
           ([key, value]) => `
-            <div class="option-card__row">
+            <div class="option-card__row ${getAttributeTheme(key)}">
               <span class="option-card__attr">${key}</span>
               <span class="option-card__value">
                 <span class="option-card__level-symbol" aria-hidden="true">${getLevelSymbol(value)}</span>

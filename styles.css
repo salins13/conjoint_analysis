@@ -221,10 +221,10 @@ body {
   min-width: 30px;
   height: 30px;
   padding: 0 7px;
-  border: 1px solid rgba(14, 107, 91, 0.14);
+  border: 1px solid color-mix(in srgb, var(--row-accent, var(--accent)) 24%, transparent);
   border-radius: 999px;
-  background: #f1faf6;
-  color: var(--accent-deep);
+  background: color-mix(in srgb, var(--row-accent, var(--accent)) 12%, white);
+  color: var(--row-ink, var(--accent-deep));
   font-size: 0.82rem;
   font-weight: 800;
   line-height: 1;
@@ -350,23 +350,62 @@ body {
 
 .option-card__list {
   display: grid;
-  gap: 11px;
+  gap: 8px;
 }
 
 .option-card__row {
-  padding-top: 10px;
-  border-top: 1px solid rgba(79, 62, 46, 0.08);
+  --row-accent: var(--accent);
+  --row-ink: var(--accent-deep);
+  padding: 10px 10px 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--row-accent) 13%, transparent);
+  border-left: 4px solid color-mix(in srgb, var(--row-accent) 72%, white);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--row-accent) 5%, white);
+}
+
+.option-card__row.attribute-lesson-format {
+  --row-accent: #2f6fbd;
+  --row-ink: #244f87;
+}
+
+.option-card__row.attribute-vocabulary-help {
+  --row-accent: #c77916;
+  --row-ink: #7c4b10;
+}
+
+.option-card__row.attribute-reading-support {
+  --row-accent: #6d5bd0;
+  --row-ink: #4d4196;
+}
+
+.option-card__row.attribute-learning-feedback {
+  --row-accent: #0f8b73;
+  --row-ink: #086555;
+}
+
+.option-card__row.attribute-sign-language-support {
+  --row-accent: #c24a7a;
+  --row-ink: #8a3157;
+}
+
+.option-card__row.attribute-navigation-tools {
+  --row-accent: #5c7c2d;
+  --row-ink: #425d20;
+}
+
+.option-card__row.attribute-cost {
+  --row-accent: #a84b2a;
+  --row-ink: #78351d;
 }
 
 .option-card__row:first-child {
-  padding-top: 0;
-  border-top: 0;
+  padding-top: 10px;
 }
 
 .option-card__attr {
   display: block;
   margin-bottom: 4px;
-  color: var(--muted);
+  color: var(--row-ink, var(--muted));
   font-size: 0.84rem;
   font-weight: 700;
   text-transform: uppercase;
