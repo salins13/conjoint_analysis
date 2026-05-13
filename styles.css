@@ -213,6 +213,20 @@ body {
   font-weight: 600;
 }
 
+.feature-option__symbol,
+.option-card__symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(14, 107, 91, 0.14);
+  border-radius: 50%;
+  background: #f1faf6;
+  font-size: 1rem;
+}
+
 .feature-option input {
   width: 18px;
   height: 18px;
@@ -347,7 +361,9 @@ body {
 }
 
 .option-card__attr {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 4px;
   color: var(--muted);
   font-size: 0.84rem;

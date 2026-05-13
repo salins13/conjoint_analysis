@@ -9,6 +9,20 @@ const featureCheckboxes = document.querySelector("#feature-checkboxes");
 const statusNode = document.querySelector("#form-status");
 const submitButton = document.querySelector(".submit-button");
 
+const ATTRIBUTE_SYMBOLS = {
+  "Lesson format": "📘",
+  "Vocabulary help": "🖼️",
+  "Reading support": "📖",
+  "Learning feedback": "🤖",
+  "Sign language support": "🤟",
+  "Navigation tools": "🧭",
+  Cost: "💰",
+};
+
+function getAttributeSymbol(feature) {
+  return ATTRIBUTE_SYMBOLS[feature] || "•";
+}
+
 function getFeatureHeadings() {
   const firstTask = window.SURVEY_TASKS[0];
   if (!firstTask || !firstTask.alternatives[0]) {
@@ -24,6 +38,7 @@ function renderFeatureCheckboxes() {
     label.className = "feature-option";
     label.innerHTML = `
       <input type="checkbox" name="topFeatures" value="${feature}" />
+      <span class="feature-option__symbol" aria-hidden="true">${getAttributeSymbol(feature)}</span>
       <span>${feature}</span>
     `;
     featureCheckboxes.appendChild(label);
@@ -57,7 +72,10 @@ function renderTasks() {
         .map(
           ([key, value]) => `
             <div class="option-card__row">
-              <span class="option-card__attr">${key}</span>
+              <span class="option-card__attr">
+                <span class="option-card__symbol" aria-hidden="true">${getAttributeSymbol(key)}</span>
+                <span>${key}</span>
+              </span>
               <span class="option-card__value">${value}</span>
             </div>
           `
