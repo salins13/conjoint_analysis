@@ -39,7 +39,7 @@ function renderTasks() {
     header.className = "task-card__header";
     header.innerHTML = `
       <div>
-        <div class="task-card__badge">Task ${task.task}</div>
+        <div class="task-card__badge">Choice set ${task.task}</div>
         <p class="task-card__note">${TASK_NOTE}</p>
       </div>
       <h3 class="task-card__title">Which textbook option do you prefer?</h3>
@@ -109,7 +109,7 @@ function validateTaskCompletion() {
   const incomplete = getTaskChoices().filter((item) => item.selectedAlternative === null);
   if (incomplete.length > 0) {
     const firstMissing = incomplete[0].task;
-    throw new Error(`Please complete Task ${firstMissing} before submitting.`);
+    throw new Error(`Please complete Choice set ${firstMissing} before submitting.`);
   }
 
   if (!form.querySelector('input[name="topFeatures"]:checked')) {
