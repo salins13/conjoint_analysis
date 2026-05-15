@@ -1,4 +1,6 @@
-const SHEET_NAME = "Responses";
+const SHEET_NAME = "Sheet1";
+const SPREADSHEET_ID = "1SUlIDPNmNE5PJEuOdyERNVgkSRzQVOpfBgsV6bDpL1c";
+
 const HEADERS = [
   "submittedAt",
   "participantId",
@@ -29,6 +31,13 @@ const HEADERS = [
   "rawJson",
 ];
 
+function doGet() {
+  return jsonOutput_({
+    ok: true,
+    message: "Survey Web App is running",
+  });
+}
+
 function doPost(e) {
   try {
     const payload = JSON.parse(e.postData.contents || "{}");
@@ -51,7 +60,7 @@ function doPost(e) {
 }
 
 function getOrCreateSheet_() {
-  const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
   const existing = spreadsheet.getSheetByName(SHEET_NAME);
   return existing || spreadsheet.insertSheet(SHEET_NAME);
 }
