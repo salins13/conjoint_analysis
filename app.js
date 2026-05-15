@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwD6a51D85yqlbJ7qFm1g-3XRB4m3eCBYiauZ5y53iy4M38g3Elb9tZmjVYVbO6zwiFvQ/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwp8DK9hCfccfEjv-g5V2AdMSpG0MwTQRa1abZb0wWgBV3P9SROFzSQ7Yw-wpn_Lc-hTA/exec";
 
 const TASK_NOTE =
   "Please review the three textbook options and choose the one you prefer.";
