@@ -9,6 +9,80 @@ const featureCheckboxes = document.querySelector("#feature-checkboxes");
 const statusNode = document.querySelector("#form-status");
 const submitButton = document.querySelector(".submit-button");
 
+const LEVEL_SYMBOLS = {
+  "Text lessons": "T",
+  "Text + pictures": "🖼️",
+  "Captioned videos": "🎬",
+  "Interactive visuals": "✨",
+  "No vocabulary help": "–",
+  "Picture support": "🖼️",
+  "Pictures + sign support": "🤟",
+  "Pictures + sign + explanation": "💬",
+  "Standard text": "A",
+  "Simplified text": "S",
+  "Short sections": "§",
+  "Personalized reading": "↔",
+  "Quiz only": "?",
+  "Instant feedback": "✓",
+  "Learning hints": "💡",
+  "AI tutor": "AI",
+  "No sign support": "–",
+  "Sign for keywords": "KW",
+  "Sign for words & sentences": "W+S",
+  "Full lesson signing": "FULL",
+  "Basic navigation": "→",
+  "Icon-based navigation": "◈",
+  "Progress tracking": "%",
+  "Progress + review": "↺",
+  Free: "0",
+  "Low cost": "$",
+  "Moderate cost": "$$",
+  "High cost": "$$$",
+};
+
+const LEVEL_INTENSITY = {
+  "Text lessons": 1,
+  "Text + pictures": 2,
+  "Captioned videos": 3,
+  "Interactive visuals": 4,
+  "No vocabulary help": 1,
+  "Picture support": 2,
+  "Pictures + sign support": 3,
+  "Pictures + sign + explanation": 4,
+  "Standard text": 1,
+  "Simplified text": 2,
+  "Short sections": 3,
+  "Personalized reading": 4,
+  "Quiz only": 1,
+  "Instant feedback": 2,
+  "Learning hints": 3,
+  "AI tutor": 4,
+  "No sign support": 1,
+  "Sign for keywords": 2,
+  "Sign for words & sentences": 3,
+  "Full lesson signing": 4,
+  "Basic navigation": 1,
+  "Icon-based navigation": 2,
+  "Progress tracking": 3,
+  "Progress + review": 4,
+  Free: 1,
+  "Low cost": 2,
+  "Moderate cost": 3,
+  "High cost": 4,
+};
+
+function getLevelSymbol(level) {
+  return LEVEL_SYMBOLS[level] || "•";
+}
+
+function getLevelIntensity(level) {
+  return `level-${LEVEL_INTENSITY[level] || 1}`;
+}
+
+function getAttributeTheme(feature) {
+  return `attribute-${feature.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+}
+
 function getFeatureHeadings() {
   const firstTask = window.SURVEY_TASKS[0];
   if (!firstTask || !firstTask.alternatives[0]) {
@@ -56,9 +130,12 @@ function renderTasks() {
         .filter(([key]) => key !== "alternative")
         .map(
           ([key, value]) => `
-            <div class="option-card__row">
+            <div class="option-card__row ${getAttributeTheme(key)}">
               <span class="option-card__attr">${key}</span>
-              <span class="option-card__value">${value}</span>
+              <span class="option-card__value">
+                <span class="option-card__level-symbol ${getLevelIntensity(value)}" aria-hidden="true">${getLevelSymbol(value)}</span>
+                <span>${value}</span>
+              </span>
             </div>
           `
         )

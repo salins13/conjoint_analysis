@@ -213,6 +213,59 @@ body {
   font-weight: 600;
 }
 
+.option-card__level-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 7px;
+  border: 1px solid color-mix(in srgb, var(--level-accent, var(--row-accent, var(--accent))) 32%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--level-accent, var(--row-accent, var(--accent))) var(--level-fill, 12%), white);
+  color: var(--level-ink, var(--row-ink, var(--accent-deep)));
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.option-card__level-symbol.level-1 {
+  --level-fill: 10%;
+}
+
+.option-card__level-symbol.level-2 {
+  --level-fill: 18%;
+}
+
+.option-card__level-symbol.level-3 {
+  --level-fill: 29%;
+}
+
+.option-card__level-symbol.level-4 {
+  --level-fill: 42%;
+}
+
+.attribute-cost .option-card__level-symbol.level-1 {
+  --level-accent: #1c8b59;
+  --level-ink: #0d5e3a;
+}
+
+.attribute-cost .option-card__level-symbol.level-2 {
+  --level-accent: #8aaa2a;
+  --level-ink: #5b701b;
+}
+
+.attribute-cost .option-card__level-symbol.level-3 {
+  --level-accent: #d28c1f;
+  --level-ink: #84570f;
+}
+
+.attribute-cost .option-card__level-symbol.level-4 {
+  --level-accent: #c2412b;
+  --level-ink: #842719;
+}
+
 .feature-option input {
   width: 18px;
   height: 18px;
@@ -333,23 +386,62 @@ body {
 
 .option-card__list {
   display: grid;
-  gap: 11px;
+  gap: 8px;
 }
 
 .option-card__row {
-  padding-top: 10px;
-  border-top: 1px solid rgba(79, 62, 46, 0.08);
+  --row-accent: var(--accent);
+  --row-ink: var(--accent-deep);
+  padding: 10px 10px 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--row-accent) 13%, transparent);
+  border-left: 4px solid color-mix(in srgb, var(--row-accent) 72%, white);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--row-accent) 5%, white);
+}
+
+.option-card__row.attribute-lesson-format {
+  --row-accent: #2f6fbd;
+  --row-ink: #244f87;
+}
+
+.option-card__row.attribute-vocabulary-help {
+  --row-accent: #c77916;
+  --row-ink: #7c4b10;
+}
+
+.option-card__row.attribute-reading-support {
+  --row-accent: #6d5bd0;
+  --row-ink: #4d4196;
+}
+
+.option-card__row.attribute-learning-feedback {
+  --row-accent: #0f8b73;
+  --row-ink: #086555;
+}
+
+.option-card__row.attribute-sign-language-support {
+  --row-accent: #c24a7a;
+  --row-ink: #8a3157;
+}
+
+.option-card__row.attribute-navigation-tools {
+  --row-accent: #5c7c2d;
+  --row-ink: #425d20;
+}
+
+.option-card__row.attribute-cost {
+  --row-accent: #a84b2a;
+  --row-ink: #78351d;
 }
 
 .option-card__row:first-child {
-  padding-top: 0;
-  border-top: 0;
+  padding-top: 10px;
 }
 
 .option-card__attr {
   display: block;
   margin-bottom: 4px;
-  color: var(--muted);
+  color: var(--row-ink, var(--muted));
   font-size: 0.84rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -357,6 +449,9 @@ body {
 }
 
 .option-card__value {
+  display: flex;
+  align-items: center;
+  gap: 9px;
   font-size: 0.96rem;
   font-weight: 600;
 }
