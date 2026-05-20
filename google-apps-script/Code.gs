@@ -162,19 +162,51 @@ function sendBackupEmail_(payload, sheet) {
     JSON.stringify(payload, null, 2),
   ].join("\n");
 
+  console.log("MailApp quota before send: " + MailApp.getRemainingDailyQuota());
+  console.log("Sending backup email to: " + BACKUP_EMAIL);
+
   MailApp.sendEmail({
     to: BACKUP_EMAIL,
     subject: "New AI Textbook Survey Response - " + (profile.name || "Unnamed respondent"),
     body: body,
   });
+
+  console.log("Backup email accepted by MailApp.");
+  console.log("MailApp quota after send: " + MailApp.getRemainingDailyQuota());
 }
 
 function testBackupEmail() {
+  const recipient = BACKUP_EMAIL.trim();
+  const subject = "Test - AI Textbook Survey Email Backup - " + new Date().toISOString();
+
+  console.log("Testing MailApp email.");
+  console.log("Recipient: " + recipient);
+  console.log("MailApp quota before send: " + MailApp.getRemainingDailyQuota());
+
   MailApp.sendEmail({
-    to: BACKUP_EMAIL,
-    subject: "Test - AI Textbook Survey Email Backup",
-    body: "This is a test email from Apps Script. If you receive this, MailApp is authorized and working.",
+    to: recipient,
+    subject: subject,
+    body: "This is a test email from Apps Script MailApp.\n\nSent at: " + new Date().toISOString(),
   });
+
+  console.log("MailApp test send completed.");
+  console.log("MailApp quota after send: " + MailApp.getRemainingDailyQuota());
+}
+
+function testGmailBackupEmail() {
+  const recipient = BACKUP_EMAIL.trim();
+  const subject = "Test - AI Textbook Survey GmailApp Backup - " + new Date().toISOString();
+
+  console.log("Testing GmailApp email.");
+  console.log("Recipient: " + recipient);
+
+  GmailApp.sendEmail(
+    recipient,
+    subject,
+    "This is a test email from Apps Script GmailApp.\n\nSent at: " + new Date().toISOString()
+  );
+
+  console.log("GmailApp test send completed. Check Inbox, Spam, All Mail, and Sent.");
 }
 
 function jsonOutput_(obj) {
