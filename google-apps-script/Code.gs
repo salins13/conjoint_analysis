@@ -1,5 +1,6 @@
 const SHEET_NAME = "Sheet1";
 const SPREADSHEET_ID = "1SUlIDPNmNE5PJEuOdyERNVgkSRzQVOpfBgsV6bDpL1c";
+const BACKUP_EMAIL = "salins13@gmail.com";
 
 const HEADERS = [
   "submittedAt",
@@ -48,6 +49,7 @@ function doPost(e) {
 
     const row = buildRow_(payload);
     sheet.appendRow(row);
+    sendBackupEmail_(payload, sheet);
 
     return jsonOutput_({
       ok: true,
@@ -120,6 +122,51 @@ function normalizeChoices_(choices) {
     acc[item.task] = item.selectedAlternative;
     return acc;
   }, {});
+}
+
+function sendBackupEmail_(payload, sheet) {
+  const profile = payload.profile || {};
+  const choices = normalizeChoices_(payload.choices || []);
+  const topFeatures = Array.isArray(profile.topFeatures)
+    ? profile.topFeatures.join(", ")
+    : "";
+  const choiceLines = Array.from({ length: 12 }, function (_, index) {
+    const taskNumber = index + 1;
+    return "Choice set " + taskNumber + ": Option " + (choices[taskNumber] || "");
+  }).join("\n");
+
+  const body = [
+    "New survey response received.",
+    "",
+    "Spreadsheet: " + sheet.getParent().getUrl(),
+    "Sheet tab: " + sheet.getName(),
+    "",
+    "Submitted at: " + (payload.submittedAt || ""),
+    "Participant ID: " + (profile.participantId || ""),
+    "Survey date: " + (profile.surveyDate || ""),
+    "Name: " + (profile.name || ""),
+    "Email: " + (profile.email || ""),
+    "Gender: " + (profile.gender || ""),
+    "Age: " + (profile.age || ""),
+    "Profession: " + (profile.profession || ""),
+    "Experience years: " + (profile.experienceYears || ""),
+    "Work setting: " + (profile.workSetting || ""),
+    "Uses AI tools: " + (profile.usesAiTools || ""),
+    "Involved in selection: " + (profile.involvedInSelection || ""),
+    "Top features: " + topFeatures,
+    "",
+    "Choices:",
+    choiceLines,
+    "",
+    "Raw JSON:",
+    JSON.stringify(payload, null, 2),
+  ].join("\n");
+
+  MailApp.sendEmail({
+    to: BACKUP_EMAIL,
+    subject: "New AI Textbook Survey Response - " + (profile.name || "Unnamed respondent"),
+    body: body,
+  });
 }
 
 function jsonOutput_(obj) {
