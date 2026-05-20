@@ -169,6 +169,14 @@ function sendBackupEmail_(payload, sheet) {
   });
 }
 
+function testBackupEmail() {
+  MailApp.sendEmail({
+    to: BACKUP_EMAIL,
+    subject: "Test - AI Textbook Survey Email Backup",
+    body: "This is a test email from Apps Script. If you receive this, MailApp is authorized and working.",
+  });
+}
+
 function jsonOutput_(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(
     ContentService.MimeType.JSON
