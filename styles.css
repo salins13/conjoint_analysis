@@ -182,8 +182,29 @@ body {
   border-radius: 16px;
   background: var(--paper-strong);
   color: var(--ink);
+  color-scheme: light;
   font: inherit;
   transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.field select {
+  appearance: none;
+  background-color: var(--paper-strong);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--accent-deep) 50%),
+    linear-gradient(135deg, var(--accent-deep) 50%, transparent 50%);
+  background-position:
+    calc(100% - 22px) 52%,
+    calc(100% - 16px) 52%;
+  background-repeat: no-repeat;
+  background-size: 6px 6px, 6px 6px;
+  cursor: pointer;
+  padding-right: 46px;
+}
+
+.field select option {
+  background: #fffdf9;
+  color: var(--ink);
 }
 
 .field input:focus,
