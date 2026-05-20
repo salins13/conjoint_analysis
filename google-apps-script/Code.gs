@@ -1,6 +1,6 @@
 const SHEET_NAME = "Sheet1";
 const SPREADSHEET_ID = "1SUlIDPNmNE5PJEuOdyERNVgkSRzQVOpfBgsV6bDpL1c";
-const BACKUP_EMAIL = "salins13@gmail.com";
+const BACKUP_EMAIL = "salin.spam@gmail.com";
 
 const HEADERS = [
   "submittedAt",
@@ -48,12 +48,12 @@ function doPost(e) {
     ensureHeader_(sheet);
 
     const row = buildRow_(payload);
-    sheet.appendRow(row);
     sendBackupEmail_(payload, sheet);
+    sheet.appendRow(row);
 
     return jsonOutput_({
       ok: true,
-      message: "Response stored",
+      message: "Backup email sent and response stored",
     });
   } catch (error) {
     return jsonOutput_({
