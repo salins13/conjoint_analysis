@@ -210,6 +210,8 @@ function serializeForm() {
       surveyDate: setTodayDefault(),
       name: profile.name || "",
       email: profile.email || "",
+      gender: profile.gender || "",
+      age: profile.age || "",
       profession: profile.profession || "",
       experienceYears: profile.experienceYears || "",
       workSetting: profile.workSetting || "",
